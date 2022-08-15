@@ -1,7 +1,4 @@
-from msilib.schema import ServiceInstall
-from urllib import response
 from django.shortcuts import render
-
 from .models import Answer
 from .serializers import AnswerSerializer
 

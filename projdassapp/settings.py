@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-f)gpt2y+9$+5(^0@rz(r%$9%(&91cl5!a+=%er@3@q^rg*2bk!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+
 ALLOWED_HOSTS = ['localhost','dass-api.herokuapp.com']
 
 
@@ -42,13 +43,15 @@ INSTALLED_APPS = [
     'choices',
     'patients',
     'questions',
-    'answers'
+    'answers',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -130,4 +133,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+CORS_ALLOWED_ORIGINS = ['localhost','dass-api.herokuapp.com']

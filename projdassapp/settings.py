@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-f)gpt2y+9$+5(^0@rz(r%$9%(&91cl5!a+=%er@3@q^rg*2bk!
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost','dass-api.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -133,6 +133,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = ['localhost','dass-api.herokuapp.com']
-
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+CORS_ORIGIN_ALLOW_ALL = True
